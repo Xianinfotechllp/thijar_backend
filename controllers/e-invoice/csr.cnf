@@ -1,0 +1,25 @@
+openssl_conf = openssl_init
+
+[openssl_init]
+oid_section = custom_oids
+
+[custom_oids]
+TSTZATCA-Code-Signing = 1.3.6.1.4.1.311.10.3.12
+
+[req]
+default_bits       = 2048
+prompt             = no
+default_md         = sha256
+distinguished_name = dn
+req_extensions     = v3_req
+
+[dn]
+C  = SA
+ST = Riyadh
+L  = Riyadh
+O  = YourCompany
+CN = 123456789000003
+
+[v3_req]
+keyUsage = critical, digitalSignature
+extendedKeyUsage = TSTZATCA-Code-Signing

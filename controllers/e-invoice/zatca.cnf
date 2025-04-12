@@ -1,0 +1,19 @@
+# zatca.cnf
+[req]
+default_bits = 2048
+prompt = no
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+
+[req_distinguished_name]
+CN = Thijar
+serialNumber = 1-Qr|2-Model|3-xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx
+O = Samaya
+OU = B1 Branch
+C = SA
+
+[v3_req]
+organizationIdentifier = 300101602100003
+invoiceType = 1100
+locationAddress = RRRD2929
+industryBusinessCategory = Supply activities
